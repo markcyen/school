@@ -21,17 +21,17 @@ RSpec.describe Student do
       expect(student.scores).to eq([])
     end
 
-    it '#log_scores into array' do
+    it '#log_score into array' do
       student = Student.new({name: "Morgan", age: 21})
-      student.log_scores(89)
-      student.log_scores(78)
+      student.log_score(89)
+      student.log_score(78)
       expect(student.scores).to eq([89, 78])
     end
 
     it '#grade as average of scores' do
       student = Student.new({name: "Morgan", age: 21})
-      student.log_scores(89)
-      student.log_scores(78)
+      student.log_score(89)
+      student.log_score(78)
       expect(student.grade).to eq(83.5)
     end
   end
