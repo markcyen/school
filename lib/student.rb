@@ -13,4 +13,11 @@ class Student
     @scores << score
   end
 
+  def grade
+    sum_scores = @scores.sum do |score|
+      score
+    end
+    (sum_scores.to_f / @scores.length)
+  end
+
 end
